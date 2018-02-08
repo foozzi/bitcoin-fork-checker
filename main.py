@@ -15,14 +15,14 @@ class Fork():
 			p.map(self.make_all, f)
 
 	def make_all(self, address):
-		btc = self.btc_balance(fg)
-		bch = self.bch_balance(fg)
-		btx = self.btx_balance(fg)
-		superbtc = self.superbtc_balance(fg)
-		b2x = self.b2x_balance(fg)
-		lbtc = self.lbtc_balance(fg)
-		bcx = self.bcx_balance(fg)
-		print('| %s | %s | %s | %s | %s | %s | %s | %s |\n' % (fg, btc, bch, btx, superbtc, b2x, lbtc, bcx))
+		btc = self.btc_balance(address)
+		bch = self.bch_balance(address)
+		btx = self.btx_balance(address)
+		superbtc = self.superbtc_balance(address)
+		b2x = self.b2x_balance(address)
+		lbtc = self.lbtc_balance(address)
+		bcx = self.bcx_balance(address)
+		print('| %s | %s | %s | %s | %s | %s | %s | %s |\n' % (address, btc, bch, btx, superbtc, b2x, lbtc, bcx))
 
 	def btc_balance(self, address):
 		r = requests.get('https://blockchain.info/q/addressbalance/%s' % address)
