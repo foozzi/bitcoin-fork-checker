@@ -4,13 +4,14 @@ import argparse
 import os.path
 
 class Fork():
-	def __init__(self, filename):
+	def __init__(self, filename, threads):
 		if not os.path.isfile(filename):
 			exit('File not found')
+		f = open(filename, 'r')	
+		if not threads:
+			threads = 10
 
-		f = open(filename, 'r')
-
-		with Pool(10) as p:           
+		with Pool(int(threads)) as p:           
 			p.map(self.make_all, f)
 
 	def make_all(self, address):
@@ -63,5 +64,6 @@ class Fork():
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser()
 	parser.add_argument("filepath", help="set file path wtih addresses")
+	parser.add_argument("-t", "--threads", help="set number threads (default 10)", required=False)
 	args = parser.parse_args()
-	Fork(args.filepath)
+	Fork(args.filepath, args.threads)
