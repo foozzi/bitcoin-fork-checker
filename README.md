@@ -1,8 +1,9 @@
 # bitcoin-fork-checker
-Check your balance from your bitcoin fork 
+Bitcoin forks balance checker 
+![Image](https://i.imgur.com/WKA0jgX.png)
 
 ### support
-Bitcoin, Bitcoin Cash, Bitcore(BTX), SuperBTC, B2X, Lightningbitcoin, BCX
+Bitcoin Cash, Bitcore(BTX), SuperBTC, B2X, Lightningbitcoin, BCX, BTG
 
 ### how to
 ```bash
@@ -11,6 +12,3 @@ python main.py -h
 ```bash
 python main.py filepath -t <number threads>
 ```
-
-### is coming
-Bitcoin Gold
