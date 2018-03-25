@@ -12,3 +12,6 @@ python main.py -h
 ```bash
 python main.py filepath -t <number threads>
 ```
+
+```donate```
+Bitcoin: 19ex3Gz3ohcLaYNFUS4qUTZTuZbvrtNdYm
