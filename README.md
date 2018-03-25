@@ -13,5 +13,5 @@ python main.py -h
 python main.py filepath -t <number threads>
 ```
 
-```donate```
+### DONATE
 Bitcoin: 19ex3Gz3ohcLaYNFUS4qUTZTuZbvrtNdYm
